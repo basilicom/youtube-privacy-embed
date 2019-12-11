@@ -14,6 +14,7 @@ export function initialize(classname, baseConfig = {}) {
 
   for(let element of elements) {
     let elementConfig = Helpers.parseConfig(element, {...DefaultConfig, ...baseConfig});
+    element.classList.add('ype-wrapper');
     console.log(elementConfig);
     Initializations.initializePreview(element, elementConfig);
   }
