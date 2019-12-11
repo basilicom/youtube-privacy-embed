@@ -1,5 +1,3 @@
-// import _ from 'lodash';
-// import numRef from './ref.json';
 import * as Initializations from './initializations';
 import * as Helpers from './helpers';
 import {default as DefaultConfig} from './config.json';
@@ -15,7 +13,11 @@ export function initialize(classname, baseConfig = {}) {
   for(let element of elements) {
     let elementConfig = Helpers.parseConfig(element, {...DefaultConfig, ...baseConfig});
     element.classList.add('ype-wrapper');
-    console.log(elementConfig);
-    Initializations.initializePreview(element, elementConfig);
+
+    if(localStorage.getItem('ype-accepted-terms') === '1') {
+      Initializations.initializeYoutubeVideo(element, elementConfig, false);
+    } else {
+      Initializations.initializePreview(element, elementConfig);
+    }
   }
 }

@@ -25,3 +25,37 @@
 .ype-link {
     padding-left: 10px;
 }
+
+.ype-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.ype-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.ype-image-overlay {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    opacity:0.5;
+    text-align: center;
+}
+
+.ype-image-overlay-icon {
+    width: 100px;
+    transition: transform .5s ease;
+}
+
+.ype-image-overlay:hover .ype-image-overlay-icon {
+    transform: scale(1.1);
+}

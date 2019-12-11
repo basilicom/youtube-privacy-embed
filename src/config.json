@@ -1,14 +1,17 @@
 {
   "openPrivacyDeclarationLinkInNewTab": false,
   "previewImage": "",
+  "previewImageOverlayIcon": "",
   "privacyAcceptText": "Please confirm our data privacy terms.",
   "privacyDeclarationLinkText": "privacy statement",
   "privacyDeclarationLinkUrl": "#",
   "privacyNoticeText": "For more information, please read out data privacy terms.",
+  "privacyNoticeTextHighlightColor": "#ff0000",
+  "saveAcceptanceInCookie": true,
   "useNoCookie": true,
-  "videoAutoplay": false,
   "videoAllowFullscreen": true,
+  "videoAutoplay": false,
+  "videoId": "",
   "videoPlayerLanguage": "",
-  "videoRelated": false,
-  "videoId": ""
+  "videoRelated": false
 }
