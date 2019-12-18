@@ -10,7 +10,9 @@ export function initialize(classname, baseConfig = {}) {
 
   let elements = document.getElementsByClassName(classname.toString());
 
-  for(let element of elements) {
+  for(let i = 0; i < elements.length; i++)
+  {
+    let element = elements.item(i);
     let elementConfig = Helpers.parseConfig(element, {...DefaultConfig, ...baseConfig});
     element.classList.add('ype-wrapper');
 

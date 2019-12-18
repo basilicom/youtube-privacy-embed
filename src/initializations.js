@@ -15,7 +15,7 @@ export function initializeYoutubeVideo(element, elementConfig, autoplay) {
   let iframe = document.createElement('iframe');
   iframe.setAttribute('src', videoUrl);
   iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
-  iframe.setAttribute('autoplay', '1');
+  iframe.setAttribute('frameborder', 'no');
 
   let wrapper = document.createElement('div');
   wrapper.classList.add('ype-video');

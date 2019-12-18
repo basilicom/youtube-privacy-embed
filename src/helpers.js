@@ -1,3 +1,9 @@
+if (!String.prototype.startsWith) {
+  String.prototype.startsWith = function(searchString, position) {
+    position = position || 0;
+    return this.indexOf(searchString, position) === position;
+  };
+}
 
 function unslug(slug) {
   let words = slug.split("-");
@@ -11,7 +17,8 @@ export function parseConfig(element, baseConfig) {
   /** @type NamedNodeMap **/
   let attributes = element.attributes;
 
-  for(let attribute of attributes) {
+  for(let i = 0; i < attributes.length; i++) {
+    let attribute = attributes[i];
     if(attribute.name.startsWith('data-ype-')) {
       let name = unslug(attribute.name.substring(9));
       let value = attribute.value;
