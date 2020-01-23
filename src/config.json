@@ -9,6 +9,7 @@
   "privacyNoticeTextHighlightColor": "#ff0000",
   "saveAcceptanceInCookie": true,
   "useNoCookie": true,
+  "useLabelOnCheckbox": true,
   "videoAllowFullscreen": true,
   "videoAutoplay": false,
   "videoId": "",

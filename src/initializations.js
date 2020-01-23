@@ -81,13 +81,24 @@ export function initializePreview(element, elementConfig) {
   text.classList.add('ype-text');
   text.appendChild(link);
 
+  let id = 'ype-' + Math.ceil(Math.random() * 1000);
+
   let checkbox = document.createElement('input');
   checkbox.setAttribute('type', 'checkbox');
+  checkbox.setAttribute('id', id);
   checkbox.classList.add('ype-checkbox');
 
   let hint = document.createElement('div');
   hint.classList.add('ype-hint');
   hint.appendChild(checkbox);
+
+  if(elementConfig.useLabelOnCheckbox) {
+    let label = document.createElement('label');
+    label.classList.add('ype-checkbox-label');
+    label.setAttribute('for', id);
+    hint.appendChild(label)
+  }
+
   hint.appendChild(text);
   element.appendChild(hint);
 
