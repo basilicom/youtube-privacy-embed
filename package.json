@@ -1,6 +1,6 @@
 {
   "name": "youtube-privacy-embed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A option to embed youtube videos with advanced privacy",
   "main": "dist/youtube-privacy-embed.js",
   "module": "src/index.js",
